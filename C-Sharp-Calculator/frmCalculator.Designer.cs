@@ -177,7 +177,7 @@ namespace C_Sharp_Calculator
             this.btnDecimal.Tag = "";
             this.btnDecimal.Text = ".";
             this.btnDecimal.UseVisualStyleBackColor = true;
-            this.btnDecimal.Click += new System.EventHandler(this.btnDecimal_Click);
+            this.btnDecimal.Click += new System.EventHandler(this.btnClick_Numbers);
             // 
             // btnEdition
             // 
@@ -190,7 +190,7 @@ namespace C_Sharp_Calculator
             this.btnEdition.Tag = "+";
             this.btnEdition.Text = "+";
             this.btnEdition.UseVisualStyleBackColor = true;
-            this.btnEdition.Click += new System.EventHandler(this.btnClick_Opperators);
+            this.btnEdition.Click += new System.EventHandler(this.btnClick_SelectOperators);
             // 
             // btnZero
             // 
@@ -215,7 +215,7 @@ namespace C_Sharp_Calculator
             this.btnReturn.Tag = "1";
             this.btnReturn.Text = "↩ ";
             this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnClick_Return);
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // tboEntry
             // 
@@ -238,6 +238,7 @@ namespace C_Sharp_Calculator
             this.btnClear.Tag = "";
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDivide
             // 
@@ -250,7 +251,7 @@ namespace C_Sharp_Calculator
             this.btnDivide.Tag = "/";
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.btnClick_Opperators);
+            this.btnDivide.Click += new System.EventHandler(this.btnClick_SelectOperators);
             // 
             // btnMultiply
             // 
@@ -263,7 +264,7 @@ namespace C_Sharp_Calculator
             this.btnMultiply.Tag = "*";
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnClick_Opperators);
+            this.btnMultiply.Click += new System.EventHandler(this.btnClick_SelectOperators);
             // 
             // btnSubtract
             // 
@@ -276,7 +277,7 @@ namespace C_Sharp_Calculator
             this.btnSubtract.Tag = "-";
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
-            this.btnSubtract.Click += new System.EventHandler(this.btnClick_Opperators);
+            this.btnSubtract.Click += new System.EventHandler(this.btnClick_SelectOperators);
             // 
             // frmCalculator
             // 
