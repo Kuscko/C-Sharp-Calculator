@@ -215,6 +215,7 @@ namespace C_Sharp_Calculator
             this.btnReturn.Tag = "1";
             this.btnReturn.Text = "↩ ";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnClick_Return);
             // 
             // tboEntry
             // 

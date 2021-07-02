@@ -14,8 +14,9 @@ namespace C_Sharp_Calculator
     {
 
         Double solution;
-        string valueHolder;
+        Double valueHolder;
         String operator_selected;
+        bool op = false;
 
         public frmCalculator()
         {
@@ -25,8 +26,9 @@ namespace C_Sharp_Calculator
         private void btnClick_Numbers(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            if(tboEntry.Text == "0")
+            if(tboEntry.Text == "0" || op)
                 tboEntry.Clear();
+            op = false;
             switch (button.Text)
             {
                 case "0":
@@ -75,7 +77,41 @@ namespace C_Sharp_Calculator
         private void btnClick_Opperators(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            if(tboEntry.Text != "0")
+            {
+                operator_selected = button.Text;
+                btnReturn.PerformClick();
+                tboEntry.Clear();
+                op = true;
+            }
+            else
+            {
+                solution = Double.Parse(tboEntry.Text);
+                operator_selected = button.Text;
+                op = true;
+            }
+        }
 
+        private void btnClick_Return(object sender, EventArgs e)
+        {
+            switch (operator_selected)
+            {
+                case "+":
+                    tboEntry.Text = (solution + Double.Parse(tboEntry.Text)).ToString();
+                    break;
+                case "-":
+                    tboEntry.Text = (solution - Double.Parse(tboEntry.Text)).ToString();
+                    break;
+                case "*":
+                    tboEntry.Text = (solution * Double.Parse(tboEntry.Text)).ToString();
+                    break;
+                case "/":
+                    tboEntry.Text = (solution / Double.Parse(tboEntry.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
+            solution = Double.Parse(tboEntry.Text);
         }
     }
 }
