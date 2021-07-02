@@ -28,6 +28,7 @@ namespace C_Sharp_Calculator
         }
         
 
+        // enter the numbers to the calculator
         private void btnClick_Numbers(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -74,11 +75,12 @@ namespace C_Sharp_Calculator
             }
         }
 
+        
+        //Selects operators and does the calculations when an operator button is clicked.
+             
         private void btnClick_SelectOperators(object sender, EventArgs e)
         {
-            /*
-             * Selects operators and does the calculations when an operator button is clicked.
-             */
+            
 
             Button button = sender as Button;
             if(tboEntry.Text != "0")
@@ -89,10 +91,9 @@ namespace C_Sharp_Calculator
             }
         }
 
+        // Determine the result of the solution using a switch-case condition against the operator selection of /, *, -, +.     
         private void btnReturn_Click(object sender, EventArgs e)
-            /*
-             * Determine the result of the solution using a switch-case condition against the operator selection of /, *, -, +.
-             */
+            
         {
             switch (operator_selection)
             {
